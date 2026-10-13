@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS — Beyond Reality</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080810;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 8%;
+      border-bottom: 1px solid #252535;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #b6a0ff;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #b6a0ff;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+      background:
+        radial-gradient(ellipse at center,
+        #29204e 0%, #111020 35%, #080810 72%);
+    }
+
+    .tag {
+      color: #b6a0ff;
+      border: 1px solid #55447f;
+      border-radius: 30px;
+      padding: 9px 18px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 100px);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #a68bff;
+      text-shadow: 0 0 40px #7851ff66;
+    }
+
+    .description {
+      max-width: 550px;
+      color: #aaa8bd;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      padding: 16px 30px;
+      background: #a68bff;
+      color: #080810;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 35px #a68bff66;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      padding: 40px 20px;
+      border-top: 1px solid #252535;
+      flex-wrap: wrap;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .stat p {
+      color: #89889b;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      color: #666579;
+      padding: 25px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 22px 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .stats {
+        gap: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">NEXUS.</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#stats">Explore</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="tag">WELCOME TO THE FUTURE</div>
+
+      <h1>THINK<br><span>BEYOND.</span></h1>
+
+      <p class="description" id="about">
+        Enter a new digital dimension. Explore ideas,
+        challenge reality, and create something that
+        has never existed before.
+      </p>
+
+      <button class="button" onclick="explore()">
+        ENTER THE UNKNOWN ↗
+      </button>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stat">
+        <strong>∞</strong>
+        <p>Infinite Possibilities</p>
+      </div>
+
+      <div class="stat">
+        <strong>01</strong>
+        <p>A New Beginning</p>
+      </div>
+
+      <div class="stat">
+        <strong>100%</strong>
+        <p>Your Imagination</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 NEXUS STUDIO — MADE FOR THE FUTURE
+  </footer>
+
+  <script>
+    function explore() {
+      document.getElementById("stats").scrollIntoView({
+        behavior: "smooth"
+      });
+
+      document.querySelector(".button").textContent =
+        "WELCOME TO NEXUS ✓";
+    }
+  </script>
+</body>
+</html>
