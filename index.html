@@ -2,218 +2,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEXAS — Beyond Reality</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEON DISTRICT</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+body {
+  background:#080808;
+  color:white;
+  font-family:Arial,sans-serif;
+  overflow-x:hidden;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #080810;
-      color: white;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 8%;
+  border-bottom:1px solid #222;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 8%;
-      border-bottom: 1px solid #252535;
-    }
+.logo {
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:3px;
+  color:#c7ff00;
+}
 
-    .logo {
-      font-size: 26px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      color: #b6a0ff;
-    }
+nav a {
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-size:13px;
+}
 
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 14px;
-      transition: color 0.3s;
-    }
+.hero {
+  min-height:85vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:8%;
+  background:
+  radial-gradient(ellipse at 75% 50%, #333 0%, #111 35%, #080808 70%);
+}
 
-    nav a:hover {
-      color: #b6a0ff;
-    }
+.tag {
+  color:#c7ff00;
+  letter-spacing:5px;
+  font-size:12px;
+  margin-bottom:25px;
+}
 
-    .hero {
-      min-height: 85vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background:
-        radial-gradient(ellipse at center,
-        #29204e 0%, #111020 35%, #080810 72%);
-    }
+h1 {
+  font-size:clamp(65px,12vw,150px);
+  line-height:.85;
+  font-weight:900;
+  letter-spacing:-8px;
+}
 
-    .tag {
-      color: #b6a0ff;
-      border: 1px solid #55447f;
-      border-radius: 30px;
-      padding: 9px 18px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
+h1 span { color:#c7ff00; }
 
-    h1 {
-      font-size: clamp(48px, 9vw, 100px);
-      line-height: 0.95;
-      letter-spacing: -5px;
-      margin-bottom: 25px;
-    }
+.hero p {
+  margin-top:30px;
+  color:#999;
+  max-width:420px;
+  line-height:1.7;
+}
 
-    h1 span {
-      color: #a68bff;
-      text-shadow: 0 0 40px #7851ff66;
-    }
+button {
+  margin-top:30px;
+  width:170px;
+  padding:16px;
+  background:#c7ff00;
+  border:0;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
 
-    .description {
-      max-width: 550px;
-      color: #aaa8bd;
-      font-size: 17px;
-      line-height: 1.8;
-      margin-bottom: 35px;
-    }
+button:hover {
+  background:white;
+  transform:translateY(-5px);
+}
 
-    .button {
-      padding: 16px 30px;
-      background: #a68bff;
-      color: #080810;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.section {
+  padding:90px 8%;
+}
 
-    .button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 35px #a68bff66;
-    }
+.section h2 {
+  font-size:42px;
+  margin-bottom:35px;
+}
 
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 70px;
-      padding: 40px 20px;
-      border-top: 1px solid #252535;
-      flex-wrap: wrap;
-    }
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
+.card {
+  min-height:260px;
+  background:linear-gradient(145deg,#252525,#101010);
+  border:1px solid #292929;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  transition:.3s;
+}
 
-    .stat p {
-      color: #89889b;
-      font-size: 13px;
-    }
+.card:hover {
+  border-color:#c7ff00;
+  transform:translateY(-8px);
+}
 
-    footer {
-      text-align: center;
-      color: #666579;
-      padding: 25px;
-      font-size: 12px;
-    }
+.card small { color:#c7ff00; margin-bottom:12px; }
+.card h3 { font-size:25px; }
+.card p { color:#888; margin-top:10px; line-height:1.5; }
 
-    @media (max-width: 600px) {
-      header {
-        padding: 22px 5%;
-      }
+footer {
+  border-top:1px solid #222;
+  padding:35px 8%;
+  display:flex;
+  justify-content:space-between;
+  color:#777;
+  font-size:12px;
+}
 
-      nav a {
-        margin-left: 10px;
-        font-size: 12px;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
-
-      .stats {
-        gap: 35px;
-      }
-    }
-  </style>
+@media(max-width:600px) {
+  nav a { margin-left:10px; font-size:10px; }
+  h1 { letter-spacing:-4px; }
+  footer { gap:15px; flex-direction:column; }
+}
+</style>
 </head>
-
 <body>
-  <header>
-    <div class="logo">TEXUS.</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#stats">Explore</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="tag">TO THE FUTURE</div>
+<nav>
+  <div class="logo">ND.</div>
+  <div>
+    <a href="#about">ABOUT</a>
+    <a href="#explore">EXPLORE</a>
+  </div>
+</nav>
 
-      <h1>THINK<br><span>BEYOND.</span></h1>
+<section class="hero">
+  <div class="tag">WELCOME TO THE UNKNOWN</div>
+  <h1>BEYOND<br>THE <span>ORDINARY.</span></h1>
+  <p>
+    A digital playground for creative minds.
+    Discover new ideas, explore different dimensions
+    and create your own reality.
+  </p>
+  <button onclick="explore()">ENTER DISTRICT ↗</button>
+</section>
 
-      <p class="description" id="about">
-        Enter a new digital dimension. Explore ideas,
-        challenge reality, and create something that
-        has never existed before.
-      </p>
+<section class="section" id="explore">
+  <h2>EXPLORE THE UNKNOWN.</h2>
+  <div class="cards">
+    <div class="card">
+      <small>01 / SOUND</small>
+      <h3>Audio Lab</h3>
+      <p>Discover a world of sound, rhythm and frequencies.</p>
+    </div>
+    <div class="card">
+      <small>02 / VISUALS</small>
+      <h3>Digital Art</h3>
+      <p>Where imagination becomes reality.</p>
+    </div>
+    <div class="card">
+      <small>03 / FUTURE</small>
+      <h3>New World</h3>
+      <p>Explore ideas that haven't existed yet.</p>
+    </div>
+  </div>
+</section>
 
-      <button class="button" onclick="explore()">
-        ENTER THE UNKNOWN ↗
-      </button>
-    </section>
+<section class="section" id="about">
+  <h2>CREATE YOUR OWN REALITY.</h2>
+  <p style="color:#999;max-width:500px;line-height:1.8">
+    There are no rules here. Just creativity, experimentation
+    and endless possibilities. Welcome to Neon District.
+  </p>
+</section>
 
-    <section class="stats" id="stats">
-      <div class="stat">
-        <strong>∞</strong>
-        <p>Infinite Possibilities</p>
-      </div>
+<footer>
+  <div>NEON DISTRICT © 2026</div>
+  <div>DESIGNED FOR THE FUTURE.</div>
+</footer>
 
-      <div class="stat">
-        <strong>01</strong>
-        <p>A New Beginning</p>
-      </div>
+<script>
+function explore() {
+  document.getElementById("explore").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+</script>
 
-      <div class="stat">
-        <strong>100%</strong>
-        <p>Your Imagination</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2026 NEXUS STUDIO — MADE FOR THE FUTURE
-  </footer>
-
-  <script>
-    function explore() {
-      document.getElementById("stats").scrollIntoView({
-        behavior: "smooth"
-      });
-
-      document.querySelector(".button").textContent =
-        "WELCOME TO NEXUS ✓";
-    }
-  </script>
 </body>
 </html>
